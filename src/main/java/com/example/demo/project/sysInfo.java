@@ -1,4 +1,4 @@
-/*
+package com.example.demo.project;/*
  *  Sample system information class for JNI
  *
  *  Copyright (c) 2024 Mark Burkley (mark.burkley@ul.ie)

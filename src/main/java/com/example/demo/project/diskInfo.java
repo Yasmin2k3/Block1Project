@@ -1,4 +1,4 @@
-/*
+package com.example.demo.project;/*
  *  Disk information class for JNI
  *
  *  Copyright (c) 2024 Mark Burkley (mark.burkley@ul.ie)

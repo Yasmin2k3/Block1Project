@@ -1,3 +1,5 @@
+package com.example.demo.project;
+
 /*
  *  Example class containing methods to read and display CPU, PCI and USB information
  *
