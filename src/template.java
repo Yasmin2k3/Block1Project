@@ -1,5 +1,8 @@
+import com.CPUChart;
+
 public class template
 {
+    /*
     public static void showPCI()
     {
         pciInfo pci = new pciInfo();
@@ -77,17 +80,20 @@ public class template
         cpu.read(1);
         System.out.println("core 1 idle="+cpu.getIdleTime(1)+"%");
     }
+     */
 
-    public static void main(String[] args)
-    {
-        System.loadLibrary("sysinfo");
-        sysInfo info = new sysInfo();
-        cpuInfo cpu = new cpuInfo();
-        cpu.read(0);
+    public static void main(String[] args) {
+        CPUChart work = new CPUChart();
 
-        showCPU();
-        showPCI();
-        showUSB();
+        work.buildBusyLineChart(5);
+        //System.loadLibrary("sysinfo");
+        //sysInfo info = new sysInfo();
+        //cpuInfo cpu = new cpuInfo();
+        //cpu.read(0);
+
+        //showCPU();
+        //showPCI();
+        //showUSB();
     }
 }
 

@@ -1,11 +1,11 @@
-package com.example.demo;
+package com;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CPUChart {
     //gets an arraylist of values every second for cpu busy percentage
-    private static void buildBusyLineChart(int busyPercent){
+    public static void buildBusyLineChart(int busyPercent){
 
         //temporary timer
         int count=0;
@@ -32,7 +32,7 @@ public class CPUChart {
     }
 
     public static void main(String[] args) {
-        buildBusyLineChart(1);
+        //buildBusyLineChart(1);
 
     }
 
