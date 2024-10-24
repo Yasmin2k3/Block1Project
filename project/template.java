@@ -1,10 +1,4 @@
-/*
- *  Example class containing methods to read and display CPU, PCI and USB information
- *
- *  Copyright (c) 2024 Mark Burkley (mark.burkley@ul.ie)
- */
-
-public class template 
+public class template
 {
     public static void showPCI()
     {
@@ -64,6 +58,8 @@ public class template
     {
         cpuInfo cpu = new cpuInfo();
         cpu.read(0);
+
+        System.out.println("cpu idle time: " + cpu.getIdleTime(1));
 
         // Show CPU model, CPU sockets and cores per socket
         System.out.println("CPU " + cpu.getModel() + " has "+

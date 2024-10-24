@@ -1,18 +1,20 @@
 .PHONY: libsysinfo/libsysinfo.so
 
 MODULES=sysInfo cpuInfo pciInfo usbInfo
-HEADERS=$(MODULES:=.h)
+HEADERS=$(MODULES:%=%.h)
 
-MYPROJECT=template
+LIBSYSINFO_PATH=libsysinfo
+LIBSYSINFOSO_PATH=$(LIBSYSINFO_PATH)/libsysinfo.so
+MYPROJECT=test
 
-all: $(HEADERS) template.class libsysinfo/libsysinfo.so
+all: $(HEADERS) $(MYPROJECT).class $(LIBSYSINFOSO_PATH)
 
-$(MYPROJECT).class: $(MYPROJECT).java libsysinfo/libsysinfo.so
+$(MYPROJECT).class: $(MYPROJECT).java $(LIBSYSINFOSO_PATH)
 	javac $<
 
 $(HEADERS): %.h: %.java
-	javac -h . $<
+	javac -h $<
 
-libsysinfo/libsysinfo.so:
-	$(MAKE) -C libsysinfo
+$(LIBSYSINFOSO_PATH):
+	$(MAKE) -C $(LIBSYSINFO_PATH)
 
