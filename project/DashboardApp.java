@@ -51,7 +51,7 @@ public class DashboardApp {
         mainContent.add(createContentPanel("Memory Info: Placeholder for Memory Info"), "Memory Info");
         mainContent.add(createContentPanel("Bus Info: Placeholder for Bus Info"), "Bus Info");
 
-        // Create buttons
+        // Create buttons//
         String[] buttonLabels = {"General Info", "CPU Info", "Memory Info", "PCI Info", "Bus Info"};
         for (String label : buttonLabels) {
             JButton button = createStyledButton(label);
